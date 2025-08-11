@@ -2,6 +2,7 @@
 Representation of input data as points within a continuous vector space
 
 https://projector.tensorflow.org/
+
 ![Pasted image 20250213032451.png](Pasted%20image%2020250213032451.png)
 
 There are many ways of encoding or representing the input data
