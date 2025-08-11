@@ -1,4 +1,4 @@
-#### Embeddings
+## Embeddings
 Representation of input data as points within a continuous vector space
 
 https://projector.tensorflow.org/
