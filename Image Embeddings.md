@@ -1,8 +1,8 @@
-#### Embeddings
+	#### Embeddings
 Representation of input data as points within a continuous vector space
 
 https://projector.tensorflow.org/
-![[Pasted image 20250213032451.png]]
+![Pasted image 20250213032451.png](Pasted%20image%2020250213032451.png)
 
 There are many ways of encoding or representing the input data
 
@@ -28,8 +28,8 @@ Two parts:
 2.Decoder
 - Maps representation space back to original data space
 
-![[Pasted image 20250212153409.png]]
-![[Pasted image 20250212134824.png]]
+![Pasted image 20250212153409.png](Pasted%20image%2020250212153409.png)
+![Pasted image 20250212134824.png](Pasted%20image%2020250212134824.png)
 
 Bottleneck
 - Created by having dimension of representation (a) smaller than input (x), resulting in dimensionality reduction
@@ -63,7 +63,7 @@ Different way of bottlenecking
 - -> Similar concept as regularization
 - -> Usually results in more interpretable features, better for anomaly detection
 
-![[Pasted image 20250213114231.png]]
+![Pasted image 20250213114231.png](Pasted%20image%2020250213114231.png)
 
 ##### Variational Autoencoder
 Probabilistic rather than deterministic
@@ -72,7 +72,7 @@ Probabilistic rather than deterministic
 Bottleneck is typically modeled as a lower dimensional latent space **with** Gaussian distribution of mean _μ_ vectors and σ$^2$ variance vectors  
 -> Sample of this distribution is fed into decoder
 
-![[Pasted image 20250213154252.png]]
+![Pasted image 20250213154252.png](Pasted%20image%2020250213154252.png)
 
 ###### What are we trying to learn with this distribution?
 -> We are actually modelling the noise that is present in the dataset
@@ -81,7 +81,7 @@ Bottleneck is typically modeled as a lower dimensional latent space **with** Gau
 How do we backpropagate since the sampling is probabilistic (has randomness)?
 - ***Issue 1: Sampling is random, therefore non-differentiable***
 	- Lets say you wanna train a robot leg to score a goal. You missed the first time with 120N of force, then scored with 140N of force. However, you forgot to account for the stronger wind in the first kick, thus cannot establish a relationship between force and scoring accuracy. You thus need a **controlled** way of kicking the ball.
-		![[image-1.png]]
+		![image-1.png](image-1.png)
 	- ->Why not take an average of many samples? 
 		- Expensive to run decoder multiple times
 		- We lose variance information
@@ -90,7 +90,7 @@ How do we backpropagate since the sampling is probabilistic (has randomness)?
 			- Each reconstruction corresponds to an average sample, nuance lost
 	- ***Issue 2: Changing the parameters affect the sample***
 		- You are in a controlled environment now and found the ideal force to kick the ball. This time, there is now a goalkeeper tasked with blocking the shot. In its first shot, the goalkeeper made a save, and now the robot is making a slight adjustment by shooting more to the right. However, the goalkeeper anticipated where the robot would shoot based on the first shot and blocked the shot again. Since the goalkeeper's judgement **is dependent on** where the robot was aiming, we don't know how much adjusting the shot slightly to the right improved the scoring chances. You thus need a way to retain information about the previous shot when determining scoring chances.
-		![[image-3.png]]
+		![image-3.png](image-3.png)
 		
 mathematical justification: https://gregorygundersen.com/blog/2018/04/29/reparameterization/
 
@@ -100,15 +100,15 @@ Express the random sampling as a separate function
 	1. Allows us to calculate how learned distribution changes while retaining information about the "sample" in the backward pass
 	2. Breaks the correlation of the of sampling on mean and variance
 
-![[image-7.png]]
-![[image-5.png]]
+![image-7.png](image-7.png)
+![image-5.png](image-5.png)
 
 ###### Loss Function
 Loss has two components: 1. Reconstruction Loss  2. KL Divergence (ensures normally distributed)
-![[image-9.png]]
+![image-9.png](image-9.png)
 
 Weighing of each loss differently has trade-offs
-![[image-11.png]]
+![image-11.png](image-11.png)
 
 During training:-
 1. Input x gets encoded
@@ -118,13 +118,13 @@ During training:-
 5. Loss is calculated based on z values, means and variances also to be adjusted
 6. Minimize loss using backpropagation
 
-![[image-14.png]]
+![image-14.png](image-14.png)
 
 ###### Why VAE over vanilla AE?
 1. Continuity
 Can sample over any point, has meaningful interpolations and smooth transformations
 ->e.g., morphing one face into another
-![[image-12.png|286x260]]
+![286x260](image-12.png)
 
 2. Noise is controlled
 You force the model to recognize noise, ideally making the model generalize better
@@ -134,14 +134,14 @@ Disentangled Representations: You force the learning of structured latent spaces
 ##### Masked Autoencoder
 Input data is partially masked or corrupted before being fed into the autoencoder
 
-![[Pasted image 20250213110604.png]]
+![Pasted image 20250213110604.png](Pasted%20image%2020250213110604.png)
 
 **Some stuff to think about:**
 1. Words are discrete, image space is continuous (rgb values)
 2. Information density in language vs images is very different 
 	- Obscuring a random word in a sentence vs obscuring random pixels in an image
 3. 1 pixel has little to no information, a collection of pixels can be contextually significant (0,0,255 vs blueberry)
-![[Pasted image 20250213035754.png]]
+![Pasted image 20250213035754.png](Pasted%20image%2020250213035754.png)
 
 Masked Autoencoders are Scalable Vision Learners
 https://arxiv.org/pdf/2111.06377
@@ -151,7 +151,7 @@ Apparently we can remove 75% of the input image for a ViT-based encoder-decoder 
 
 Pretraining on masked autoencoder improved larger ViT models, suggesting that it helps solve overfitting and scale up model sizes
 
-![[Pasted image 20250213040344.png]]
+![Pasted image 20250213040344.png](Pasted%20image%2020250213040344.png)
 
 ### Attention-Based Embeddings
 Positional information is added to the embedding
@@ -161,14 +161,14 @@ self-attention mechanism. Vanilla Vision Transformers (for image classification)
 #### Patch Embedding
 Image is first split into patches. 
 Note: in vanilla ViT, patches are non-overlapping
-![[image-18.png]]
+![image-18.png](image-18.png)
 
 Patches flattened to 1D vector. 3 Channels (r,g,b) combined.
-![[image-30.png]]
+![image-30.png](image-30.png)
 
 Linear projection is performed (each new feature is simple a weighted sum of the original features).
 Note: in vanilla ViT, D is the same dimension as the 1d vector (also allows for easier implementation of skip connections)
-![[image-45.png]]
+![image-45.png](image-45.png)
 
 #### Positional Embedding
 We want to retain information on where the position of each patch is in the image. 
@@ -184,20 +184,20 @@ Positional information is encoded as a learnable "lookup table". Not a neural ne
 **Why learnable embeddings?**
 Traditionally positional information in Transformers are encoded (with sinusoidal encoding) from the input rather than learned from scratch. While learnable embedding and fixed encoding aims to learn patch position, ideally making it learnable lets the model learn what it wants to learn and not to pollute it too much with inductive bias. Learnable positional embeddings are more flexible and adapt based on the data and task. 
 
-![[image-46.png]]
+![image-46.png](image-46.png)
 
 **What does it look like?**
 During training, these embeddings converge into vector spaces where they show _high similarity_ to their neighboring position embeddings. Thus, ViT's positional embedding learns absolute positioning of each patch in the image.
-![[image-37.png]]
+![image-37.png](image-37.png)
 
 ##### CLS Token
 `CLS` token is a "dummy" (no input) patch added to the sequence of patch embeddings. Used for aggregating information from all the patches. The `CLS` token is fed into the classifier network rather than the embedding of the whole image to classify the image. 
 
 Therefore number of tokens N = Number of patches + 1
-![[image-48.png]]
+![image-48.png](image-48.png)
 Together, they make up the embedded patches
 #### Transformer Encoder Block
-![[image-81.png]]
+![image-81.png](image-81.png)
 ##### Self-Attention
 Vision transformers use self-attention to weigh the importance of each image patch relative to one another. There any many ways to implement attention, "self" refers to the model comparing attention scores of elements in the input **against each other**.
 
@@ -219,8 +219,8 @@ Same process occurs for the key and value vectors.
 Typically, the dimension D of the embedded patches > d$_v$ > d$_Q$ = d$_k$
 But in ViT, dimension D of the embedded patches > d$_v$ = d$_Q$ = d$_k$
 
-![[image-60.png]]
-![[image-77.png]]
+![image-60.png](image-60.png)
+![image-77.png](image-77.png)
 
 **We can sort of gain the intuition for Q, K and V by giving it an analogy: -**
 Let's say you are looking for a romantic partner in a speed dating event. You interact with all the participants, looking for suitable matches. Since you have limited time, you can only focus on a small number of participants. In this case:
@@ -230,7 +230,7 @@ Let's say you are looking for a romantic partner in a speed dating event. You in
 **Attention score:** Based on comparing this participant's traits with your ideal type, you choose to focus on  interacting with him more than the other participants.
 **Value:** You both discuss what each other brings to the relationship. Since you are interested in this person, you listen and pay more attention to what he has to say (his job, his background, his temperament, your chemistry together, etc.). At the end of the day, these conversations contain the content that helps you decide whether or not to pursue this relationship.
 
-![[image-44.png]]
+![image-44.png](image-44.png)
 
 Multiplying these attention scores (Q.K transposed) with the Value matrix gives us a lookup table containing the information of the patch weighted by how much focus to give to it. 
 
@@ -250,7 +250,7 @@ Now that we have a way to express how much each patch should **attend to** (pay 
 
 **What does QK$^T$ . V tell us?**
 We can think of it as weighting the value matrix based on attention scores.
-![[image-69.png]]
+![image-69.png](image-69.png)
 Let each column of the value vector be a specific property that describes each patch (e.g. how many round shapes?). Let each query be a question (e.g. is there a bald head?) and each key be a descriptive list (e.g. bald head, glove, armlet).
 
 Patch 0 asks all the other patches: "Do you have what I'm looking for?" The other patches replies with their keys. If the key matches the query, the attention score is high. Otherwise, the attention score is small or in the negatives. 
@@ -269,20 +269,20 @@ There are some adjustments to be made so that the scores serve better as weights
 - ->To fix this, we divide all values in the QK$^T$ lookup table by the root of the key/query dimension. 
 Together, we call it scaled dot product attention, which is a fundamental mechanism behind transformers.
 
-![[image-59.png]]
+![image-59.png](image-59.png)
 
 **Putting it All Together**
-![[image-73.png]]
+![image-73.png](image-73.png)
 #### Doing it in Parallel: Multi-headed Attention
 Multi-head self-attention applies self-attention (one head of attention) multiple times at once in parallel, each head having its own key, query and value transformations of the same input. The output of these heads are combined at the end.
-![[image-75.png|323x418]]
+![323x418](image-75.png)
 
 **Why multiple heads of attention?**
 -> More descriptive power
 Each head may focus on a specific aspect of an image (e.g. one head learns shape, one head learns texture). i.e., Each head learns its own lower-scale feature map (Q, K, V) corresponding to a specific feature as opposed to one all-encompassing map.
 
 **Idea: Multi-Head Attention (MHA) in Transformers is Analogous to Multiple Kernels in CNNs**
-![[image-76.png]]
+![image-76.png](image-76.png)
 Similar to multi-convolutional kernels (filters) in CNNs: process the same input but extract different types of features, each with their own weights.
 However how they learn differently. CNN features get increasingly more global as hierarchy (how far a layer is from the first) increases. ViT features can be global from the start.
 ##### Multi-head Attention Implementation
@@ -290,38 +290,38 @@ Output value matrices from each attention head is concatenated together dimensio
 
 The concatenated output is projected back to the dimension of the embedded patches (back to the same dimension as the input to each attention head).
 
-![[image-80.png]]
+![image-80.png](image-80.png)
 
 What is the purpose of the final linear projection?
 -> Combine the outputs from different heads into a single representation, mixing the information
 -> Easier implementation of residual connections
 #### Parallelization 
 In practice, we use 4-rank tensors to parallelize the math of the attention heads. 
-![[image-83.png]]
+![image-83.png](image-83.png)
 
 Lets say we have a 32 x 32 image and choose 16 x 16 as the patch size. That leaves us with N=5.
-![[image-84.png]]
+![image-84.png](image-84.png)
 
 Accounting for RGB, that gives us a [5 x 768] 2D tensor
-![[image-85.png]]
+![image-85.png](image-85.png)
 
 We let embedding dimension D = 128
-![[image-88.png]]
+![image-88.png](image-88.png)
 
 Since we will be training in batches, we'll introduce batch dimension B.
 We let d$_k$, d$_v$ and d$_q$ be = 32. That's 96 weights per attention head.  We are using 4 attention heads, h = 4. That's a total of 384 weights per head.  
 In Pytorch's ViT implementation, one big linear.nn is used for the combined q,k,v weights for all heads. 
-![[image-92.png]]
+![image-92.png](image-92.png)
 
 The resulting matrix after applying the weights is then reshaped into individual matrices along the head dimension.
-![[image-94.png]]
-![[image-96.png]]
+![image-94.png](image-94.png)
+![image-96.png](image-96.png)
 
 In applying scaled dot product attention, we get the weighted values. They are then concatenated (flattened).
-![[image-100.png]]
+![image-100.png](image-100.png)
 
 We apply the final linear projection.
-![[image-101.png]]
+![image-101.png](image-101.png)
 
 We can thus see that in practice, multi-head self-attention is no more expensive than single-head given the low-rankness of the transformations we apply. 
 
@@ -330,10 +330,10 @@ The output multi-head attention linear projection is inputted to a MLP. All the 
 
 > [!info]- Non-Linearity
 > The composition of one or more linear functions is itself a linear function. A neural network using only linear activations can be rewritten as a linear function, no matter how wide or deep the neural network.
-> ![[image-128.png]]
+> ![image-128.png](image-128.png)
 > 
 > If we add a non-linear activation function, we introduce non-linearity. Some of the more common non-linear functions tanh and sigmoid which curves, and ReLU, which is piecewise linear (thus non-linear).
-> ![[image-129.png]]
+> ![image-129.png](image-129.png)
 > 
 > ReLU is especially common in machine learning as it 
 > 1. Is just a simple max operation, super easy to compute (and its derivatives are just 1 or 0)
@@ -347,19 +347,19 @@ The output multi-head attention linear projection is inputted to a MLP. All the 
 > https://playground.tensorflow.org/
 > 
 > linear activations = only can have linear boundary (single line)
->![[image-124.png]]
+>![image-124.png](image-124.png)
 >ReLU allows for the bending of the decision boundary
->![[image-125.png]]
+>![image-125.png](image-125.png)
 
 A simple two-layer MLP with GELU activation in between is used in the Transformer encoder. An expansion factor of 4 is used where the depth of the first layer is 4D. The second layer shrinks the dimensionality back to D.
-![[image-134.png]]
+![image-134.png](image-134.png)
 
 ##### Gaussian Error Linear Unit (GeLU) Activation
 The GeLU non-linearity weights inputs by their percentile in the cumulative distribution function of a Gaussian distribution. In the case of transformers, the range of values for a given input token is what's being weighted. That is:-
 - For **very negative x:** Φ(x)≈ 0 | small number * negative x | ≈0
 - For **very positive x**: Φ(x)≈ 1 | x
 Therefore, Φ(x) is linear for large values of x, softly scales down small positive values, softly scales up small negative values and nullifies large negative values.
-![[image-137.png]]
+![image-137.png](image-137.png)
 
 ###### Why GeLU?
 GeLU is smooth and differentiable in all ranges, allowing gradients (although small) in negative range. Compared to ReLU with only 1 or 0 as derivatives, GeLU can push weights in more directions. It also mitigates the dying RELU problem, negative inputs still give a small non-zero output and gradient rather than 0.
@@ -370,7 +370,7 @@ GELUs are used in GPT-3, BERT, and most other Transformers.
 #### Extra tricks for stability
 Since transformers are highly parallelizable, we often take advantage of the saved compute time by scaling up the model. Thus, we want the model to maintain stability and efficiency as scale increases.
 ##### LayerNorm 
-![[image-81.png]]
+![image-81.png](image-81.png)
 Batch Normalization is a trainable method known to speed up convergence and improve stability in neural networks. Initially proposed to solve internal covariate shifts, it is now believed that the smoothing effect brought upon by normalization (especially during backpropagation) is the stronger proponent of the improvements. BatchNorm normalizes across the batch dimension.
 
 > [!info]- Covariate Shift
@@ -382,18 +382,18 @@ Batch Normalization is a trainable method known to speed up convergence and impr
 LayerNorm in transformers normalizes across the features/embeddings of each token. The name itself is misleading, as LayerNorm in CNN normalizes across the entire image. LayerNorm is actually similar to InstanceNorm for transformers, the terminology has just been brought forward from preceding works.
 
 > [!info]- Comparing Norms
-> ![[image-109.png]]
+> ![image-109.png](image-109.png)
 
 LayerNorm re-centres each patch embedding of each token into a standard normal distribution. A small constant ϵ is added to the denominator for numerical stability (prevent div 0 or very small values). Two learnable affine parameters γ and β are typically used to allow for a more flexible representation of the distribution.
-![[image-103.png]]
+![image-103.png](image-103.png)
 
 γ controls the scale of the distribution, β controls the shift
-![[image-105.png]]
+![image-105.png](image-105.png)
 
 LayerNorm is performed twice in a transformer encoder block: -
 1. Once on the embedded patches before multi-head attention
 2. Once more on the output of the multi-head attention before feeding to MLP
-![[image-108.png]]
+![image-108.png](image-108.png)
 
 > [!info]- PreNorm vs PostNorm
 > ViT uses Pre-LayerNorm, where LayerNorm is performed before the Multi-Head Attention and MLP as well as the summation from residual connection proceeding them. This  is a reordering of steps from the original transformer paper, which uses Post-LayerNorm. In Post-LayerNorm, LayerNorm takes place after the summation and preceding MHA/MLP. 
@@ -406,37 +406,37 @@ LayerNorm is performed twice in a transformer encoder block: -
 ###### Issues with Deep Neural Networks
 **Initialization**
 Deep neural networks have been notoriously harder to train as the number of layers increase. At initialization, random weights and activations from each layer progressively alter the input randomly as it propagates from layer to layer. At the final layers, the output may differ greatly from the initial input to the point that it is just random noise. This makes the initial training of the network result in much slower convergence compared to a shallow network, as the loss function wanders around randomly.
-![[image-117.png]]
+![image-117.png](image-117.png)
 
 **Vanishing and Exploding Gradients**
 When we calculate loss in a large neural network, we get increasingly longer chains of partial derivatives which contains values that are bounded to<1 (derivatives of common activations ReLU, sigmoid, etc.). When we multiply many <1 values, we get a really small number. The further back in the layers we go, the longer the chain and smaller the loss. If the loss gets too close to 0 for one layer, the layers before it will not be updated (0 loss = correct prediction). Learning is thus haltered for these preceding layers. The opposite is also true where gradients are too big and cause a cascade effect of exploding weights.
 ###### ResNets are the Solution
-![[image-116.png]]
+![image-116.png](image-116.png)
 
 ResNets solve the scalability issue in deep neural networks by using skip connections via addition.
 We simply add the input of a layer to the output of a non-immediate following layer. The residual block is structured to learn adjustments `F(x)` to the input `x`, i.e., the **residuals** rather than synthesize a direct mapping.
-![[image-114.png]]
+![image-114.png](image-114.png)
 
 **Effect: Not all Layers has to be Useful**
 Residual connections fundamentally allow deeper models to perform at least as well as a shallower counterpart. If the two layers in the diagram above is not needed, the model simply has to learn `F(x) = 0` rather than `F(x) =` a$_0$, which is much, much easier. As a result, ResNets behave like an ensemble of shallow networks.
 
 **Effect: Helps with Vanishing Gradients**
 The gradients in the direct network is calculated as a multiplicative chain of partial derivatives, whereas the residual network passes its gradient to earlier layer no matter how small the multiplication of partial differentials become (we also see it as creating a new direct path for the residual block loss to flow to the residual block input).
-![[image-119.png]]
+![image-119.png](image-119.png)
 
 **Effect: Smoothing the Loss Landscape**
 Residual connections effectively smoothens the loss landscape and simplifies optimization. It has been theorized that residual connections bypass conflicting layers (layers that just add noise) in a neural network.[^1] Skip connections allow the model to fall back on the identity mapping if the neurons in some layers are not helping.
-![[image-115.png]]
+![image-115.png](image-115.png)
 
 ###### Residual Connections in Transformer Architectures
 Going back to the need for scalability, Transformers can get really deep especially considering they meant to run at scale. Residual connections help with numerical stability and optimization. The connection connects 
 1) the unnormalized input to the MHA output, 
 2) unnormalized input and MHA output to the MLP output. In a way, we are reminding the MLP and MHA what the original input was. 
 (Note: only residual connection, output is not passed to an activation function like in ResNets)
-![[image-120.png]]
+![image-120.png](image-120.png)
 ##### Stacking Multiple Layers of Transformer Encoders
 Transformer Networks stack multiple transformer layers (also called blocks) sequentially (encoder-only for ViT). The output for each layer is taken as the input for the next layer. 
-![[image-141.png]]
+![image-141.png](image-141.png)
 ###### Effect of Stacking Layers
 Stacking multiple layers enables the model to refine representations hierarchically, analogous to adding depth to a CNN model. The earlier layers in ViT learn to encode more local information, while later layers encode more global information[^4]. 
 
@@ -448,17 +448,17 @@ As you stack additional encoder layers, the amount of complexity the network can
 CNNs have an explicit locality bias in earlier layers due to how kernelling works (each neuron sees a small receptive field at first, later layers can see the pixels within the receptive fields of prior layers).
 ViT encodes the entire image from the start and don’t have built-in local-to-global hierarchy like CNNs. ViTs learn hierarchy implicitly from data, which has shown to have a local-to-global hierarchy[^4]. The flexibility of ViTs to learn whatever hierarchical relationship it wants leads to a requirement for more training data.
 >
-![[image-143.png]]
+![image-143.png](image-143.png)
 Picture: The closer layers are to each other, the more similar. Opposite applies. Implies local-to-global hierarchy.
 ##### MLP Head (Classification Head)
 The CLS token from the output of the final layer is passed to a linear layer (MLP head/classification head). The MLP head has one layer. This layer maps D to the number of classes, giving the probability distribution logits for each class.
-![[image-145.png]]
+![image-145.png](image-145.png)
 #### Recap: Counting Parameters and Big O
 As a sanity check, lets obtain back the 86M params in the base ViT model. The number of classes is 1000 for ImageNet, and there are 196 + 1 patches of 16 x 16.
-![[image-138.png]]
+![image-138.png](image-138.png)
 
 Looking back into the entire ViT architecture, we have the following weights:-
-![[image-147.png]]
+![image-147.png](image-147.png)
 
 **Transformer Block** 
 x L layers of:
