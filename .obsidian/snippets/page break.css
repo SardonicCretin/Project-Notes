@@ -1,0 +1,14 @@
+/* Pagebreak */
+
+@media print {
+  h1, h2 {
+    page-break-before: always;
+  }
+  h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+  .internal-embed {
+    page-break-after: avoid;
+    page-break-before: avoid;
+  }
+}

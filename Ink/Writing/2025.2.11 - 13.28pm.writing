@@ -1,0 +1,463 @@
+{
+	"meta": {
+		"pluginVersion": "0.3.3",
+		"tldrawVersion": "2.1.0",
+		"previewIsOutdated": true
+	},
+	"tldraw": {
+		"document": {
+			"store": {
+				"document:document": {
+					"gridSize": 10,
+					"name": "",
+					"meta": {},
+					"id": "document:document",
+					"typeName": "document"
+				},
+				"page:3qj9EtNgqSCW_6knX2K9_": {
+					"meta": {},
+					"id": "page:3qj9EtNgqSCW_6knX2K9_",
+					"name": "Handwritten Note",
+					"index": "a1",
+					"typeName": "page"
+				},
+				"shape:writing-lines": {
+					"x": 0,
+					"y": 0,
+					"rotation": 0,
+					"isLocked": true,
+					"opacity": 1,
+					"meta": {
+						"savedH": 225
+					},
+					"type": "writing-lines",
+					"parentId": "page:3qj9EtNgqSCW_6knX2K9_",
+					"index": "a1",
+					"props": {
+						"x": 0,
+						"y": 0,
+						"w": 2000,
+						"h": 525
+					},
+					"id": "shape:writing-lines",
+					"typeName": "shape"
+				},
+				"shape:writing-container": {
+					"x": 0,
+					"y": 0,
+					"rotation": 0,
+					"isLocked": true,
+					"opacity": 1,
+					"meta": {
+						"savedH": 225
+					},
+					"type": "writing-container",
+					"parentId": "page:3qj9EtNgqSCW_6knX2K9_",
+					"index": "a1",
+					"props": {
+						"x": 0,
+						"y": 0,
+						"w": 2000,
+						"h": 525
+					},
+					"id": "shape:writing-container",
+					"typeName": "shape"
+				},
+				"shape:jJFlArPuZR4M8mdjZY1dq": {
+					"x": 206.34920634920636,
+					"y": 90.89781746031746,
+					"rotation": 0,
+					"isLocked": false,
+					"opacity": 1,
+					"meta": {},
+					"id": "shape:jJFlArPuZR4M8mdjZY1dq",
+					"type": "draw",
+					"props": {
+						"segments": [
+							{
+								"type": "free",
+								"points": [
+									{
+										"x": 0,
+										"y": 0,
+										"z": 0.5
+									},
+									{
+										"x": 0,
+										"y": -5.29,
+										"z": 0.5
+									},
+									{
+										"x": 5.29,
+										"y": -10.58,
+										"z": 0.5
+									},
+									{
+										"x": 10.58,
+										"y": -21.16,
+										"z": 0.5
+									},
+									{
+										"x": 18.52,
+										"y": -31.75,
+										"z": 0.5
+									},
+									{
+										"x": 23.81,
+										"y": -39.68,
+										"z": 0.5
+									},
+									{
+										"x": 29.1,
+										"y": -44.97,
+										"z": 0.5
+									},
+									{
+										"x": 31.75,
+										"y": -47.62,
+										"z": 0.5
+									},
+									{
+										"x": 34.39,
+										"y": -50.26,
+										"z": 0.5
+									},
+									{
+										"x": 29.1,
+										"y": -50.26,
+										"z": 0.5
+									},
+									{
+										"x": 15.87,
+										"y": -44.97,
+										"z": 0.5
+									},
+									{
+										"x": -2.65,
+										"y": -39.68,
+										"z": 0.5
+									},
+									{
+										"x": -23.81,
+										"y": -34.39,
+										"z": 0.5
+									},
+									{
+										"x": -42.33,
+										"y": -31.75,
+										"z": 0.5
+									},
+									{
+										"x": -58.2,
+										"y": -29.1,
+										"z": 0.5
+									},
+									{
+										"x": -66.14,
+										"y": -26.46,
+										"z": 0.5
+									},
+									{
+										"x": -66.14,
+										"y": -23.81,
+										"z": 0.5
+									},
+									{
+										"x": -66.14,
+										"y": -18.52,
+										"z": 0.5
+									},
+									{
+										"x": -60.85,
+										"y": -10.58,
+										"z": 0.5
+									},
+									{
+										"x": -58.2,
+										"y": -2.65,
+										"z": 0.5
+									},
+									{
+										"x": -52.91,
+										"y": 2.65,
+										"z": 0.5
+									},
+									{
+										"x": -47.62,
+										"y": 10.58,
+										"z": 0.5
+									},
+									{
+										"x": -42.33,
+										"y": 21.16,
+										"z": 0.5
+									},
+									{
+										"x": -37.04,
+										"y": 26.46,
+										"z": 0.5
+									},
+									{
+										"x": -31.75,
+										"y": 31.75,
+										"z": 0.5
+									},
+									{
+										"x": -31.75,
+										"y": 34.39,
+										"z": 0.5
+									},
+									{
+										"x": -31.75,
+										"y": 37.04,
+										"z": 0.5
+									},
+									{
+										"x": -34.39,
+										"y": 39.68,
+										"z": 0.5
+									},
+									{
+										"x": -39.68,
+										"y": 39.68,
+										"z": 0.5
+									},
+									{
+										"x": -44.97,
+										"y": 42.33,
+										"z": 0.5
+									},
+									{
+										"x": -52.91,
+										"y": 47.62,
+										"z": 0.5
+									},
+									{
+										"x": -68.78,
+										"y": 55.56,
+										"z": 0.5
+									},
+									{
+										"x": -87.3,
+										"y": 66.14,
+										"z": 0.5
+									},
+									{
+										"x": -100.53,
+										"y": 71.43,
+										"z": 0.5
+									},
+									{
+										"x": -105.82,
+										"y": 76.72,
+										"z": 0.5
+									},
+									{
+										"x": -108.47,
+										"y": 79.37,
+										"z": 0.5
+									},
+									{
+										"x": -103.17,
+										"y": 79.37,
+										"z": 0.5
+									},
+									{
+										"x": -100.53,
+										"y": 79.37,
+										"z": 0.5
+									},
+									{
+										"x": -95.24,
+										"y": 79.37,
+										"z": 0.5
+									},
+									{
+										"x": -89.95,
+										"y": 79.37,
+										"z": 0.5
+									},
+									{
+										"x": -82.01,
+										"y": 79.37,
+										"z": 0.5
+									},
+									{
+										"x": -66.14,
+										"y": 82.01,
+										"z": 0.5
+									},
+									{
+										"x": -52.91,
+										"y": 82.01,
+										"z": 0.5
+									},
+									{
+										"x": -39.68,
+										"y": 82.01,
+										"z": 0.5
+									},
+									{
+										"x": -29.1,
+										"y": 82.01,
+										"z": 0.5
+									},
+									{
+										"x": -23.81,
+										"y": 82.01,
+										"z": 0.5
+									},
+									{
+										"x": -21.16,
+										"y": 82.01,
+										"z": 0.5
+									},
+									{
+										"x": -18.52,
+										"y": 82.01,
+										"z": 0.5
+									},
+									{
+										"x": -15.87,
+										"y": 82.01,
+										"z": 0.5
+									},
+									{
+										"x": -10.58,
+										"y": 82.01,
+										"z": 0.5
+									},
+									{
+										"x": -7.94,
+										"y": 82.01,
+										"z": 0.5
+									},
+									{
+										"x": -5.29,
+										"y": 82.01,
+										"z": 0.5
+									},
+									{
+										"x": -2.65,
+										"y": 82.01,
+										"z": 0.5
+									},
+									{
+										"x": 0,
+										"y": 82.01,
+										"z": 0.5
+									},
+									{
+										"x": 0,
+										"y": 76.72,
+										"z": 0.5
+									},
+									{
+										"x": 2.65,
+										"y": 71.43,
+										"z": 0.5
+									},
+									{
+										"x": 2.65,
+										"y": 66.14,
+										"z": 0.5
+									},
+									{
+										"x": 2.65,
+										"y": 58.2,
+										"z": 0.5
+									},
+									{
+										"x": 2.65,
+										"y": 52.91,
+										"z": 0.5
+									},
+									{
+										"x": 2.65,
+										"y": 50.26,
+										"z": 0.5
+									},
+									{
+										"x": 2.65,
+										"y": 47.62,
+										"z": 0.5
+									},
+									{
+										"x": 0,
+										"y": 47.62,
+										"z": 0.5
+									}
+								]
+							}
+						],
+						"color": "black",
+						"fill": "none",
+						"dash": "draw",
+						"size": "m",
+						"isComplete": true,
+						"isClosed": false,
+						"isPen": false,
+						"scale": 1
+					},
+					"parentId": "page:3qj9EtNgqSCW_6knX2K9_",
+					"index": "a2",
+					"typeName": "shape"
+				}
+			},
+			"schema": {
+				"schemaVersion": 2,
+				"sequences": {
+					"com.tldraw.store": 4,
+					"com.tldraw.asset": 1,
+					"com.tldraw.camera": 1,
+					"com.tldraw.document": 2,
+					"com.tldraw.instance": 25,
+					"com.tldraw.instance_page_state": 5,
+					"com.tldraw.page": 1,
+					"com.tldraw.instance_presence": 5,
+					"com.tldraw.pointer": 1,
+					"com.tldraw.shape": 4,
+					"com.tldraw.asset.bookmark": 2,
+					"com.tldraw.asset.image": 5,
+					"com.tldraw.asset.video": 5,
+					"com.tldraw.shape.group": 0,
+					"com.tldraw.shape.text": 2,
+					"com.tldraw.shape.bookmark": 2,
+					"com.tldraw.shape.draw": 2,
+					"com.tldraw.shape.geo": 9,
+					"com.tldraw.shape.note": 7,
+					"com.tldraw.shape.line": 5,
+					"com.tldraw.shape.frame": 0,
+					"com.tldraw.shape.arrow": 5,
+					"com.tldraw.shape.highlight": 1,
+					"com.tldraw.shape.embed": 4,
+					"com.tldraw.shape.image": 4,
+					"com.tldraw.shape.video": 2,
+					"com.tldraw.shape.writing-container": 0,
+					"com.tldraw.shape.writing-lines": 0
+				}
+			}
+		},
+		"session": {
+			"version": 0,
+			"currentPageId": "page:3qj9EtNgqSCW_6knX2K9_",
+			"exportBackground": true,
+			"isFocusMode": false,
+			"isDebugMode": true,
+			"isToolLocked": false,
+			"isGridMode": false,
+			"pageStates": [
+				{
+					"pageId": "page:3qj9EtNgqSCW_6knX2K9_",
+					"camera": {
+						"x": 0,
+						"y": 0,
+						"z": 0.378
+					},
+					"selectedShapeIds": [],
+					"focusedGroupId": null
+				}
+			]
+		}
+	}
+}

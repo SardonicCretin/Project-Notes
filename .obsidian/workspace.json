@@ -1,0 +1,258 @@
+{
+  "main": {
+    "id": "62b68c844ca4a58b",
+    "type": "split",
+    "children": [
+      {
+        "id": "8f57ef36b230e2a9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ee3903e3e2ee2320",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CNNs.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CNNs"
+            }
+          },
+          {
+            "id": "eae0a02cdac1e232",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2025-02-11 11.32.57.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-02-11 11.32.57.excalidraw"
+            }
+          },
+          {
+            "id": "290571406522f43b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Image Embeddings.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Image Embeddings"
+            }
+          },
+          {
+            "id": "f9ad83d20c67f10c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Image Embeddings.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Image Embeddings"
+            }
+          },
+          {
+            "id": "a452502a2c59feac",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "image-147.png"
+              },
+              "icon": "lucide-image",
+              "title": "image-147"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5db11fb8e699e65d",
+    "type": "split",
+    "children": [
+      {
+        "id": "9ba276005e1d4edd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f0b760711a2cd624",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTimeReverse",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "f1840da2cbfc037b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "dc1665856e4076f9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8a42190fe2ed4ecf",
+    "type": "split",
+    "children": [
+      {
+        "id": "202de4a3654d5a35",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "62c7271fec98b000",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Knowledge Distillation for Image Classification.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Knowledge Distillation for Image Classification"
+            }
+          },
+          {
+            "id": "1df25f9858ab4a01",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Knowledge Distillation for Image Classification.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Knowledge Distillation for Image Classification"
+            }
+          },
+          {
+            "id": "43a6cce4846b30f3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "ff2c1de4c961c1df",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Image Embeddings.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Image Embeddings"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:New drawing": false
+    }
+  },
+  "active": "f9ad83d20c67f10c",
+  "lastOpenFiles": [
+    "Knowledge Distillation for Image Classification.md",
+    "CNNs.md",
+    "Pasted image 20250211125831.png",
+    "Confidence and Uncertainty.md",
+    "Regularization.md",
+    "Pasted image 20250210131950.png",
+    "Pasted image 20250211121400.png",
+    "image-2.png",
+    "Pasted Image 20250217181420_669.png",
+    "image-19.png",
+    "image-58.png",
+    "image-88.png",
+    "image-25.png",
+    "image-21.png",
+    "Image Embeddings.md",
+    "Excalidraw/Drawing 2025-02-11 11.32.57.excalidraw.md",
+    "raw.md",
+    "looking at other embedding context.md",
+    "Ink/Writing/2025.2.11 - 13.29pm.writing",
+    "Ink/Writing/2025.2.11 - 13.28pm (2).writing",
+    "Ink/Writing/2025.2.11 - 13.28pm.writing",
+    "Ink/Writing",
+    "Ink/Drawing/2025.2.11 - 13.09pm.drawing",
+    "Ink/Drawing",
+    "Ink",
+    "Excalidraw",
+    "Ink/Writing/2025.2.10 - 16.05pm.writing",
+    "Ink/Drawing/2025.2.10 - 16.10pm.drawing",
+    "Welcome.md"
+  ]
+}
