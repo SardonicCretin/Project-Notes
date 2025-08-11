@@ -12,7 +12,7 @@ During Training:
 3. Minimize the loss with backpropagation 
 Dataset for distillation may be different from the dataset for training Teacher model, by which it is called *Transfer Set*
 
-![[Pasted image 20250211120423.png]]
+![Pasted image 20250211120423.png](Pasted%20image%2020250211120423.png)
 
 For teacher and student network to confer with one another, need a loss function that does not just depend on correct prediction, but also effected by confidence values (output probability matching)
 
@@ -25,8 +25,8 @@ The probabilities/confidence (softmax of output logits) output from the teacher 
 
 To help, temperature component is added to "spread out" the bell curve and give the student model a wider, more varied range of values to work with
 
-![[Pasted image 20250211113528.png|666x522]]
-![[Pasted image 20250211121400.png]]
+![666x522](Pasted%20image%2020250211113528.png)
+![Pasted image 20250211121400.png](Pasted%20image%2020250211121400.png)
 
 #### Loss Function
 Two loss functions 
@@ -34,8 +34,8 @@ Two loss functions
 	2. One for Confidence Distribution Similarity -> KL Divergence
 
 **Kullback-Leibler Divergence (KL Divergence)**
-![[Pasted image 20250211142000.png]]
-![[Pasted image 20250211141713.png]]
+![Pasted image 20250211142000.png](Pasted%20image%2020250211142000.png)
+![Pasted image 20250211141713.png](Pasted%20image%2020250211141713.png)
 
 #### Alpha α
 
@@ -45,13 +45,13 @@ At a range of 0 to 1, therefore α = 0.5 means equal weightage
 
 Cross-architecture knowledge distillation
 	Transformer -> CNN
-![[Pasted image 20250211144527.png]]
+![Pasted image 20250211144527.png](Pasted%20image%2020250211144527.png)
 
 ### Multi-modal Distillation
 
 Cross-modal knowledge distillation
 	Lidar -> Camera | NDVI -> Camera
-![[Pasted image 20250211144152.png]]
+![Pasted image 20250211144152.png](Pasted%20image%2020250211144152.png)
 
 
 ___
@@ -65,5 +65,5 @@ Classifier to Detector Distillation is more common (and more useful probably):
 https://proceedings.neurips.cc/paper/2021/file/082a8bbf2c357c09f26675f9cf5bcba3-Paper.pdf
 
 Low resolution teacher student learning
-![[Pasted image 20250211125831.png]]
+![Pasted image 20250211125831.png](Pasted%20image%2020250211125831.png)
 https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136720622.pdf
